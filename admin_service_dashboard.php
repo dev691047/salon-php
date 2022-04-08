@@ -25,15 +25,24 @@ $adminid=$_SESSION["adminid"];
         margin:auto;
         width:300px;
         margin-top:50px;
+        margin-bottom:70px;
     }
     .leftinnerdiv{
-        float:left;
-        color:green;
+       display:flex;
+       flex-direction:column;
+       width:170px;
+    }
+    .rightinnerdiv{
+       position :absolute;
+       left:350px;
+       top:230px;
     }
     .greenbtn{
         background-color:green;
         color:white;
+        margin:1px;
     }
+    
     </style>
 <body>
   
@@ -42,10 +51,47 @@ $adminid=$_SESSION["adminid"];
         <div class="row"><img class="imglogo" src="https://comparecamp.com/media/uploads/2021/04/salonmanagementapp-logo.png"></div>
         <div class="leftinnerdiv">
             <Button class="greenbtn">Admin</Button>
+            <button class="greenbtn" onclick="openpart('addperson')">ADD PERSON</button>
+            <button class="greenbtn" onclick="openpart('addperson')">ADD PERSON</button>
+            <button class="greenbtn" onclick="openpart('addperson')">ADD PERSON</button>
+            <button class="greenbtn" onclick="openpart('addperson')">ADD PERSON</button>
+            <a href="index.php"><Button class="greenbtn">LOGOUT</Button></a>
+        </div>
+        <div class="rightinnerdiv">
+        <div id="addperson" class="innerright portion" >
+          <Button class="greenbtn" style="width:400px">ADD PERSON</Button>  
+         <form action="addpersonserver_page.php" method="post" enctype="multipart/form-data">
+         <label>Name :</label><input type="text" name="addname"/>
+          </br>
+          <label>Password:</label><input type="password" name="addpass"/>
+          </br>
+          <label>Email:</label><input type="email" name="addpass"/>
+          <!-- <label for="type">Choose type:</label> -->
+          <!-- <select name="type">
+              <option value="student">student</option>
+              <option value="student">student</option>
+          </select> -->
+          <input type="submit" value="SUBMIT"/>
+        </form>  
+    
+        </div>
+
+
+
         </div>
 </div>
 </div>
 
+<script>
+    function openpart(portion) {
+  var i;
+  var x = document.getElementsByClassName("portion");
+  for (i = 0; i <script x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(portion).style.display = "block";
+}
+</script>
 
     
 </body>
