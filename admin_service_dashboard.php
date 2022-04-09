@@ -42,6 +42,9 @@ $adminid=$_SESSION["adminid"];
         color:white;
         margin:1px;
     }
+    .innerright:active{
+        display:none;
+    }
     
     </style>
 <body>
@@ -57,20 +60,18 @@ $adminid=$_SESSION["adminid"];
             <button class="greenbtn" onclick="openpart('addperson')">ADD PERSON</button>
             <a href="index.php"><Button class="greenbtn">LOGOUT</Button></a>
         </div>
+
+
+
         <div class="rightinnerdiv">
-        <div id="addperson" class="innerright portion" >
+        <div id="addperson" class="innerright portion"  >
           <Button class="greenbtn" style="width:400px">ADD PERSON</Button>  
          <form action="addpersonserver_page.php" method="post" enctype="multipart/form-data">
          <label>Name :</label><input type="text" name="addname"/>
           </br>
           <label>Password:</label><input type="password" name="addpass"/>
           </br>
-          <label>Email:</label><input type="email" name="addpass"/>
-          <!-- <label for="type">Choose type:</label> -->
-          <!-- <select name="type">
-              <option value="student">student</option>
-              <option value="student">student</option>
-          </select> -->
+          <label>Email:</label><input type="email" name="addemail"/>
           <input type="submit" value="SUBMIT"/>
         </form>  
     
