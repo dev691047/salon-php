@@ -19,7 +19,9 @@ $adminid=$_SESSION["adminid"];
 </head>
 <style>
     body{
-        background-color:"grey";
+        background-image:url("https://thumbnails.production.thenounproject.com/e-3LvRIVysDS343teZDVResBuHA=/fit-in/1000x1000/photos.production.thenounproject.com/photos/E3DE3D3A-341F-4629-A1ED-BCAF80AF7F0B.jpg");
+       background-repeat:no-repeat;
+       background-size:cover
     }
     .imglogo{
         margin:auto;
@@ -38,7 +40,7 @@ $adminid=$_SESSION["adminid"];
        top:230px;
     }
     .greenbtn{
-        background-color:green;
+        background-color:PURPLE;
         color:white;
         margin:1px;
     }
@@ -54,11 +56,13 @@ $adminid=$_SESSION["adminid"];
         <div class="row"><img class="imglogo" src="https://comparecamp.com/media/uploads/2021/04/salonmanagementapp-logo.png"></div>
         <div class="leftinnerdiv">
             <Button class="greenbtn">Admin</Button>
-            <button class="greenbtn" onclick="openpart('addperson')">ADD PERSON</button>
-            <button class="greenbtn" onclick="openpart('addperson')">ADD PERSON</button>
-            <button class="greenbtn" onclick="openpart('addperson')">ADD PERSON</button>
-            <button class="greenbtn" onclick="openpart('addperson')">ADD PERSON</button>
-            <a href="index.php"><Button class="greenbtn">LOGOUT</Button></a>
+            <button class="greenbtn" onclick="openpart('addperson')">ADD MEMBER</button>
+            <button class="greenbtn" onclick="openpart('addperson')">ADD PRODUCTS</button>
+            <button class="greenbtn" onclick="openpart('addperson')">PRODUCTS LEFT</button>
+            <button class="greenbtn" onclick="openpart('addperson')">TOTAL REVENUE</button>
+            <button class="greenbtn" onclick="openpart('addperson')">RECENT REGISTERATION</button>
+
+            <a href="index.php"><Button class="greenbtn">ADMIN LOGOUT</Button></a>
         </div>
 
 
@@ -67,12 +71,12 @@ $adminid=$_SESSION["adminid"];
         <div id="addperson" class="innerright portion"  >
           <Button class="greenbtn" style="width:400px">ADD PERSON</Button>  
          <form action="addpersonserver_page.php" method="post" enctype="multipart/form-data">
-         <label>Name :</label><input type="text" name="addname"/>
+         <label>Name :</label><input style="margin:5px 30px" type="text" name="addname"/>
           </br>
-          <label>Password:</label><input type="password" name="addpass"/>
+          <label>Password:</label><input style="margin:5px 10px" type="password" name="addpass"/>
           </br>
-          <label>Email:</label><input type="email" name="addemail"/>
-          <input type="submit" value="SUBMIT"/>
+          <label>Email:</label><input style="margin:5px 38px" type="email" name="addemail"/>
+          <input type="submit" style="margin:5px 80px;display:block;" value="SUBMIT"/>
         </form>  
     
         </div>
